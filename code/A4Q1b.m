@@ -1,4 +1,4 @@
-function Q1b()
+function A4Q1b()
 im = imread('../data/test/results/005002_left_disparity.png');
 im = uint8(double(im)/256);
 data = getData('004945', 'test','calib');

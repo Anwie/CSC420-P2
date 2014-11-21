@@ -3,9 +3,9 @@ function disp = getDisparity(imset, imname)
 
 globals;
 
-path = pwd
+path = pwd;
 cd(SPSSTEREO_PATH);
-outdir = fullfile(DATA_DIR, 'results');
+outdir = fullfile(DATA_DIR, imset, 'results');
 if ~exist(outdir, 'dir')
     mkdir(outdir);
 end;

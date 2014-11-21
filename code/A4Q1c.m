@@ -1,4 +1,4 @@
-function Q1c()
+function A4Q1c()
 load('../data/test/results/detections.mat');
 im1 = imread('../data/test/left/004945.jpg');
 im2 = imread('../data/test/left/004964.jpg');
