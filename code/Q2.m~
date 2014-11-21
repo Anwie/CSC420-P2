@@ -1,0 +1,12 @@
+function Q2()
+    for i = 0:94
+        if(i < 10)
+            imfile = ['um_00000', rptgen.toString(i)];
+        else
+            imfile = ['um_0000', rptgen.toString(i)];
+        end
+        getDisparity('train', imfile);
+    end
+
+end
+

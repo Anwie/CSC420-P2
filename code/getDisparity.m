@@ -5,7 +5,7 @@ globals;
 
 path = pwd;
 cd(SPSSTEREO_PATH);
-outdir = fullfile(DATA_DIR, imset, 'results');
+outdir = fullfile(DATA_DIR, imset, 'results', 'getDisparity');
 if ~exist(outdir, 'dir')
     mkdir(outdir);
 end;
