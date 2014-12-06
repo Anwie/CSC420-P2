@@ -1,34 +1,31 @@
 function Q2()
+    globals;
+    outdir = fullfile(DATA_DIR, 'train', 'results', 'get3D');
+    if ~exist(outdir, 'dir')
+        mkdir(outdir);
+    end;
     for i = 0:94
-        if(i < 10)
-            imfile = ['um_00000', rptgen.toString(i)];
-        else
-            imfile = ['um_0000', rptgen.toString(i)];
-        end
-        getDepth('train', imfile);
+        imfile = sprintf('um_%06d', i);
+        get3D('train', imfile);
     end
         
     for i = 0:39
-        if(i < 10)
-            imfile = ['umm_00000', rptgen.toString(i)];
-        else
-            imfile = ['umm_0000', rptgen.toString(i)];
-        end
-        getDepth('train', imfile);
+        imfile = sprintf('umm_%06d', i);
+        get3D('train', imfile);
     end
     
+    outdir = fullfile(DATA_DIR, 'test', 'results', 'get3D');
+    if ~exist(outdir, 'dir')
+        mkdir(outdir);
+    end;
     for i = 61:95
-        imfile = ['umm_0000', rptgen.toString(i)];
-        getDepth('test', imfile);
+        imfile = sprintf('umm_%06d', i);
+        get3D('test', imfile);
     end
     
     for i = 0:50
-        if(i < 10)
-            imfile = ['uu_00000', rptgen.toString(i)];
-        else
-            imfile = ['uu_0000', rptgen.toString(i)];
-        end
-        getDepth('test', imfile);
+        imfile = sprintf('uu_%06d', i);
+        get3D('test', imfile);
     end
 end
 
