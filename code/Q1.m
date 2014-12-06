@@ -1,3 +1,5 @@
+% Calls getDisparity on each image, and places the
+% results in ../data/<train or test>/results/getDisparity/
 function Q1()
     for i = 0:94
         imfile = sprintf('um_%06d', i);

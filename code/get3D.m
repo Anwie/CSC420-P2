@@ -21,7 +21,7 @@ for x = 1:size(depth, 2)
     end
 end
 %pause;
-% plot; requires some navigating to get it, but expands as depth grows
+% plot; positive Z is in the direction of the expansion
 %surf(in3D(:,:,1), in3D(:,:,2), in3D(:,:,3), 'edgecolor', 'none');
-save(output, 'depth', 'in3D');  % save in a variable depth
+save(output, 'depth', 'in3D');  % save variables depth and in3D
 end

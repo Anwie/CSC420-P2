@@ -1,3 +1,5 @@
+% Calls get3D on each image, and places the
+% results in ../data/<train or test>/results/get3D/
 function Q2()
     globals;
     outdir = fullfile(DATA_DIR, 'train', 'results', 'get3D');
